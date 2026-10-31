@@ -19,7 +19,8 @@ html{scroll-behavior:smooth}.sr-only{position:absolute;width:1px;height:1px;padd
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.wheel path{transition:none}}
 
 
-.wheel .selection-ring{fill:none;stroke:#000;stroke-width:3;opacity:0;pointer-events:none}.wheel.has-selection .selection-ring{opacity:1}.wheel a:focus-visible text{text-decoration:underline;text-underline-offset:6px}
+.wheel .sector-outlines path{fill:none;stroke:#000;stroke-width:4.5;stroke-linejoin:round;opacity:0;transition:opacity .18s;pointer-events:none}.wheel .sector-outlines path.on{opacity:1}.wheel a:focus-visible text{text-decoration:underline;text-underline-offset:6px}
+.product.has-doc{cursor:pointer}.product.has-doc:hover{background:#fafbfa}.title-link{color:inherit;text-decoration:none}.product.has-doc:hover .title-link,.title-link:focus-visible{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px;text-decoration-color:var(--row-accent)}
 </style></head><body>
 <header><div class="top"><a class="brand" href="#" aria-label="처음으로"><img src="data:image/png;base64,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" alt="HJ중공업"><span class="brand-title">현장 안전보건</span></a><span class="top-mark">MSDS / SAFETY</span></div></header>
 <main>
@@ -29,7 +30,8 @@ html{scroll-behavior:smooth}.sr-only{position:absolute;width:1px;height:1px;padd
 <a href="#company=sj" aria-label="에스제이" tabindex="0"><path fill="var(--blue)" d="M180 180 L180 10 A170 170 0 0 1 327.224 265 Z"/><text x="272" y="124" fill="white">에스제이</text></a>
 <a href="#company=haesol" aria-label="해솔" tabindex="0"><path fill="var(--green)" d="M180 180 L327.224 265 A170 170 0 0 1 32.776 265 Z"/><text x="180" y="290" fill="white">해솔</text></a>
 <a href="#company=sebang" aria-label="세방" tabindex="0"><path fill="var(--yellow)" d="M180 180 L32.776 265 A170 170 0 0 1 180 10 Z"/><text x="86" y="124" fill="var(--ink)">세방</text></a>
-<circle cx="180" cy="180" r="64" fill="white" pointer-events="none" filter="url(#hubShadow)"/><circle cx="180" cy="180" r="54" fill="none" stroke="#e6ebe7" pointer-events="none"/><text class="center-title" x="180" y="175">MSDS</text><text class="center-sub" x="180" y="196">현장 안전보건</text><circle class="selection-ring" cx="180" cy="180" r="171" aria-hidden="true" pointer-events="none"/></svg></div>
+<g class="sector-outlines" aria-hidden="true"><path data-key="sj" d="M180 180 L180 10 A170 170 0 0 1 327.224 265 Z"/><path data-key="haesol" d="M180 180 L327.224 265 A170 170 0 0 1 32.776 265 Z"/><path data-key="sebang" d="M180 180 L32.776 265 A170 170 0 0 1 180 10 Z"/></g>
+<circle cx="180" cy="180" r="64" fill="white" pointer-events="none" filter="url(#hubShadow)"/><circle cx="180" cy="180" r="54" fill="none" stroke="#e6ebe7" pointer-events="none"/><text class="center-title" x="180" y="175">MSDS</text><text class="center-sub" x="180" y="196">현장 안전보건</text></svg></div>
 <div class="home-footer"><span>HJ중공업</span><span>물질안전보건자료</span></div>
 </section>
 <section id="companyView" hidden aria-label="물품 목록">
@@ -75,10 +77,13 @@ function saveState() {
  if ($('search').value.trim()) params.set('q',$('search').value.trim());
  history.replaceState(null,'',location.pathname + location.search + (params.size ? '#' + params.toString() : ''));
 }
+function msdsHref(p) {
+ const params = new URLSearchParams({pdf:p.msdsUrl,title:p.title + ' · MSDS',back:location.hash});
+ return 'index.html?' + params.toString();
+}
 function action(p) {
  if (!p.msdsUrl) return '<span class="action disabled" aria-disabled="true">파일명 연결 필요</span>';
- const params = new URLSearchParams({pdf:p.msdsUrl,title:p.title + ' · MSDS',back:location.hash});
- return `<a class="action msds" href="index.html?${esc(params.toString())}" target="_blank" rel="noopener noreferrer" aria-label="${esc(p.title + ' MSDS')}">MSDS</a>`;
+ return `<a class="action msds" href="${esc(msdsHref(p))}" target="_blank" rel="noopener noreferrer" aria-label="${esc(p.title + ' MSDS')}">MSDS</a>`;
 }
 
 const PROCESS_ORDER = {"sj":["장비","기계 (대조립)","사상 (레그,거더팀)","용접","도장","토목"],"haesol":["배관","화기","포설","결선","배관 (도장)","시운전"],"sebang":["장비","용접","취부","도장"]};
@@ -90,7 +95,7 @@ function companyRows() {
 function render() {
  const q = $('search').value.trim().toLocaleLowerCase();
  const active = !!selectedCompany || !!q || forceAll;
- document.querySelector('.wheel').classList.toggle('has-selection',!!selectedCompany);
+ document.querySelectorAll('.sector-outlines path').forEach(o => o.classList.toggle('on',o.dataset.key === selectedCompany));
  $('companyView').hidden = !active;
  document.querySelectorAll('.wheel a').forEach(a => {
   const key = new URLSearchParams(a.getAttribute('href').slice(1)).get('company');
@@ -118,7 +123,8 @@ function render() {
  $('listScope').textContent = q ? '검색: ' + $('search').value.trim() : (company ? company.name : '3개 업체');
  $('results').innerHTML = found.length ? found.map(p => {
   const c = COMPANIES[p.companyKey];
-  return `<article class="product" style="--row-accent:${c.color};--row-ink:${c.ink}"><div class="product-top"><span class="number">${String(p.no).padStart(2,'0')}</span><div><h3>${esc(p.title)}</h3>${p.manufacturer ? `<p class="manufacturer">${esc(p.manufacturer)}</p>` : ''}<p class="product-meta">${!selectedCompany ? `<span class="vendor-tag">${esc(p.company)}</span><span>·</span>` : ''}<span>${esc(p.process)}</span></p></div></div><div class="actions">${action(p)}</div></article>`;
+  const link = p.msdsUrl ? `<a class="title-link" href="${esc(msdsHref(p))}" target="_blank" rel="noopener noreferrer">${esc(p.title)}</a>` : esc(p.title);
+  return `<article class="product${p.msdsUrl ? ' has-doc' : ''}" data-i="${PRODUCTS.indexOf(p)}" style="--row-accent:${c.color};--row-ink:${c.ink}"><div class="product-top"><span class="number">${String(p.no).padStart(2,'0')}</span><div><h3>${link}</h3>${p.manufacturer ? `<p class="manufacturer">${esc(p.manufacturer)}</p>` : ''}<p class="product-meta">${!selectedCompany ? `<span class="vendor-tag">${esc(p.company)}</span><span>·</span>` : ''}<span>${esc(p.process)}</span></p></div></div><div class="actions">${action(p)}</div></article>`;
  }).join('') : '<div class="empty">검색 결과가 없습니다.</div>';
 }
 function selectCompany(key) {
@@ -143,6 +149,13 @@ $('processes').addEventListener('click',event => {
  selectedProcess = b.dataset.process;
  saveState();
  render();
+});
+$('results').addEventListener('click',event => {
+ const row = event.target.closest('.product.has-doc');
+ if (!row || event.target.closest('a,button')) return;
+ if (window.getSelection && String(window.getSelection()).length) return;
+ const p = PRODUCTS[Number(row.dataset.i)];
+ if (p && p.msdsUrl) window.open(msdsHref(p),'_blank','noopener,noreferrer');
 });
 $('allCompanies').addEventListener('click',() => {
  selectedCompany = '';
@@ -198,49 +211,60 @@ async function verifyMsdsFiles() {
 verifyMsdsFiles();
 </script>
 <style>
+.pdf-mode,.pdf-mode body{height:100%;overflow:hidden;background:#e9eef1}
 .pdf-mode body>header,.pdf-mode body>main{display:none}
-.pdf-viewer{display:none;background:#e9eef1;min-height:100vh}
-.pdf-mode .pdf-viewer{display:block}
-.pdf-toolbar{position:sticky;top:0;z-index:5;background:var(--brand);color:#fff;padding:12px;display:flex;flex-wrap:wrap;align-items:center;gap:8px}
-.pdf-toolbar h1{font-size:16px;width:100%;overflow-wrap:anywhere}
-.pdf-toolbar button,.pdf-toolbar a{font:inherit;font-size:14px;background:#fff;color:#172b3a;border:1px solid #dce5e9;border-radius:0;padding:9px 12px;text-decoration:none;cursor:pointer}
-.pdf-toolbar button:disabled{opacity:.5;cursor:default}
-.pdf-status{margin:0;padding:12px;color:#172b3a;font-size:14px;line-height:1.6}
-.pdf-pages{overflow:auto;padding:12px;text-align:center}
-.pdf-pages canvas{display:block;margin:0 auto;background:white}
-
-.pdf-stage{position:relative}
-.pdf-stage .pdf-pages{padding:12px 64px}
-.pdf-side{position:fixed;top:56%;z-index:6;display:flex;flex-direction:column;align-items:center;justify-content:center;width:46px;min-height:76px;padding:6px;background:var(--brand);color:#fff;border:1px solid #fff;border-radius:6px;cursor:pointer;transition:filter .12s,transform .12s,opacity .12s;touch-action:manipulation}
-.pdf-side-prev{left:8px}.pdf-side-next{right:8px}
-.pdf-side span{font-size:36px;line-height:1}.pdf-side small{font-size:11px;margin-top:4px}
-.pdf-side:disabled{opacity:.3;cursor:default}
-.pdf-toolbar button{transition:filter .12s,transform .12s}
-.pdf-side:not(:disabled):active,.pdf-toolbar button:not(:disabled):active{filter:brightness(.65);transform:scale(.93)}
-.pdf-side.is-pressed,.pdf-toolbar button.is-pressed{animation:pdf-button-press .22s ease-out}
+.pdf-viewer{display:none;background:#e9eef1}
+.pdf-mode .pdf-viewer{display:flex;flex-direction:column;height:100vh;height:100dvh}
+.pdf-toolbar{flex:none;z-index:5;background:var(--brand);color:#fff;padding:8px 10px;display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px}
+.pdf-toolbar h1{flex:1 1 120px;min-width:0;margin:0;font-size:14px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pdf-controls{display:flex;align-items:center;gap:6px;margin-left:auto}
+.pdf-controls .sep{width:1px;height:22px;background:#5d786d;margin:0 4px}
+#pdfCounter{min-width:58px;text-align:center;font-size:14px;font-variant-numeric:tabular-nums}
+.pdf-toolbar button,.pdf-toolbar a{font:inherit;font-size:14px;line-height:1.2;background:#fff;color:#172b3a;border:1px solid #dce5e9;border-radius:4px;padding:8px 12px;text-decoration:none;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;transition:filter .12s,transform .12s}
+.pdf-toolbar button.icon{padding:7px 10px}
+.pdf-toolbar button:disabled{opacity:.45;cursor:default}
+.pdf-toolbar button:not(:disabled):active{filter:brightness(.65);transform:scale(.93)}
+.pdf-toolbar button.is-pressed{animation:pdf-button-press .22s ease-out}
+.pdf-status{flex:none;margin:0;padding:10px 12px;color:#172b3a;font-size:14px;line-height:1.6}
+.pdf-stage{position:relative;flex:1;min-height:0}
+.pdf-pages{position:absolute;inset:0;overflow:auto;padding:8px;display:flex;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
+.pdf-pages canvas{flex:none;margin:auto;background:#fff;box-shadow:0 1px 8px rgba(20,40,50,.18)}
+.pdf-side{position:absolute;top:0;bottom:var(--sbh,0px);width:var(--zone-w,56px);z-index:4;display:flex;align-items:center;justify-content:center;padding:0;margin:0;border:0;border-radius:0;background:transparent;color:#fff;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.pdf-side-prev{left:0}.pdf-side-next{right:var(--sbw,0px)}
+.pdf-side span{display:flex;align-items:center;justify-content:center;width:54px;height:54px;border-radius:50%;background:rgba(29,60,52,.74);box-shadow:0 2px 10px rgba(0,0,0,.28);font-size:36px;line-height:1;padding-bottom:5px;transition:transform .12s,background .12s}
+.pdf-side:not(:disabled):hover{background:rgba(0,0,0,.05)}
+.pdf-side:disabled{cursor:default}.pdf-side:disabled span{opacity:0}
+.pdf-side:not(:disabled):active{background:rgba(0,0,0,.16)}
+.pdf-side:not(:disabled):active span{transform:scale(.9);background:rgba(10,24,20,.92)}
+.pdf-side.is-pressed{animation:pdf-zone-flash .24s ease-out}
+.pdf-side.is-pressed span{animation:pdf-zone-dot .24s ease-out}
+.pdf-side:focus-visible{outline:3px solid var(--blue);outline-offset:-3px}
 @keyframes pdf-button-press{0%,45%{filter:brightness(.65);transform:scale(.93)}100%{filter:brightness(1);transform:scale(1)}}
-.pdf-side:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
-@media(max-width:600px){.pdf-stage .pdf-pages{padding:12px 42px}.pdf-side{width:34px;min-height:66px}.pdf-side-prev{left:4px}.pdf-side-next{right:4px}.pdf-side span{font-size:30px}}
-@media(prefers-reduced-motion:reduce){.pdf-side,.pdf-toolbar button{transition:none}.pdf-side.is-pressed,.pdf-toolbar button.is-pressed{animation:none;filter:brightness(.65)}}
-
+@keyframes pdf-zone-flash{0%,40%{background:rgba(0,0,0,.18)}100%{background:rgba(0,0,0,0)}}
+@keyframes pdf-zone-dot{0%,40%{transform:scale(.88);background:rgba(10,24,20,.95)}100%{transform:scale(1);background:rgba(29,60,52,.74)}}
+@media(max-width:600px){.pdf-side span{width:46px;height:46px;font-size:30px}.pdf-pages{padding:4px}}
+@media(prefers-reduced-motion:reduce){.pdf-side span,.pdf-toolbar button{transition:none}.pdf-side.is-pressed,.pdf-side.is-pressed span,.pdf-toolbar button.is-pressed{animation:none}}
 .pdf-warning{padding:12px;font-size:12px;color:#62717c;line-height:1.6}
 @media print{body>*{display:none!important}body:after{content:'현장 자료 열람용 화면입니다.'}}
 </style>
 <section class="pdf-viewer" aria-label="문서 열람">
  <div class="pdf-toolbar">
+  <a id="pdfBack" href="index.html">목록</a>
   <h1 id="pdfTitle">문서 열람</h1>
-  <a id="pdfBack" href="index.html">목록으로</a>
-  <button id="pdfPrev" type="button" disabled>이전 페이지</button>
-  <span id="pdfCounter" aria-live="polite">—</span>
-  <button id="pdfNext" type="button" disabled>다음 페이지</button>
-  <button id="pdfMinus" type="button" disabled aria-label="문서 축소">축소</button>
-  <button id="pdfPlus" type="button" disabled aria-label="문서 확대">확대</button>
+  <div class="pdf-controls">
+   <button id="pdfPrev" type="button" disabled>이전</button>
+   <span id="pdfCounter" aria-live="polite">—</span>
+   <button id="pdfNext" type="button" disabled>다음</button>
+   <span class="sep" aria-hidden="true"></span>
+   <button id="pdfMinus" class="icon" type="button" disabled aria-label="문서 축소"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5M7.8 10.5h5.4"/></svg></button>
+   <button id="pdfPlus" class="icon" type="button" disabled aria-label="문서 확대"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5M7.8 10.5h5.4M10.5 7.8v5.4"/></svg></button>
+  </div>
  </div>
  <p id="pdfStatus" class="pdf-status" role="status">문서를 불러오는 중입니다.</p>
- <div class="pdf-stage">
+ <div class="pdf-stage" id="pdfStage">
   <div id="pdfPages" class="pdf-pages"><canvas id="pdfCanvas" aria-label="PDF 페이지"></canvas></div>
-  <button id="pdfSidePrev" class="pdf-side pdf-side-prev" type="button" disabled aria-label="이전 PDF 페이지"><span aria-hidden="true">‹</span><small>이전</small></button>
-  <button id="pdfSideNext" class="pdf-side pdf-side-next" type="button" disabled aria-label="다음 PDF 페이지"><span aria-hidden="true">›</span><small>다음</small></button>
+  <button id="pdfSidePrev" class="pdf-side pdf-side-prev" type="button" disabled aria-label="이전 PDF 페이지"><span aria-hidden="true">&#8249;</span></button>
+  <button id="pdfSideNext" class="pdf-side pdf-side-next" type="button" disabled aria-label="다음 PDF 페이지"><span aria-hidden="true">&#8250;</span></button>
  </div>
 </section>
 <script>
@@ -262,6 +286,7 @@ verifyMsdsFiles();
  let busy = false;
  let queued = false;
  let resizeTimer;
+ let lastDrawn = 0;
  function fail(message) {
   status.textContent = message;
  }
@@ -296,9 +321,11 @@ verifyMsdsFiles();
    const page = await doc.getPage(requestedPage);
    const original = page.getViewport({scale:1});
    const pageArea = document.getElementById('pdfPages');
+   const stage = document.getElementById('pdfStage');
    const pageStyle = getComputedStyle(pageArea);
-   const available = Math.max(160, pageArea.clientWidth - parseFloat(pageStyle.paddingLeft) - parseFloat(pageStyle.paddingRight));
-   const scale = Math.min(available / original.width, 1.65) * zoom;
+   const availW = Math.max(160, pageArea.clientWidth - parseFloat(pageStyle.paddingLeft) - parseFloat(pageStyle.paddingRight));
+   const availH = Math.max(160, pageArea.clientHeight - parseFloat(pageStyle.paddingTop) - parseFloat(pageStyle.paddingBottom));
+   const scale = Math.min(availW / original.width, availH / original.height) * zoom;
    const viewport = page.getViewport({scale:scale});
    const ratio = Math.min(window.devicePixelRatio || 1, 2);
    const canvas = document.getElementById('pdfCanvas');
@@ -311,6 +338,16 @@ verifyMsdsFiles();
     viewport:viewport,
     transform:ratio === 1 ? null : [ratio,0,0,ratio,0,0]
    }).promise;
+   if (lastDrawn !== requestedPage) {
+    pageArea.scrollTop = 0;
+    pageArea.scrollLeft = 0;
+    lastDrawn = requestedPage;
+   }
+   const sbw = pageArea.offsetWidth - pageArea.clientWidth;
+   const sbh = pageArea.offsetHeight - pageArea.clientHeight;
+   stage.style.setProperty('--sbw', sbw + 'px');
+   stage.style.setProperty('--sbh', sbh + 'px');
+   stage.style.setProperty('--zone-w', Math.max(56, (pageArea.clientWidth - viewport.width) / 2) + 'px');
    canvas.setAttribute('aria-label',requestedPage + '번째 PDF 페이지. 문서 내용은 이미지로 표시됩니다.');
    document.getElementById('pdfCounter').textContent = requestedPage + ' / ' + doc.numPages;
    status.textContent = '';
@@ -351,6 +388,9 @@ verifyMsdsFiles();
  };
  sidePrev.onclick = buttons[0].onclick;
  sideNext.onclick = buttons[1].onclick;
+ [sidePrev, sideNext].forEach(zone => zone.addEventListener('wheel', event => {
+  document.getElementById('pdfPages').scrollBy(event.deltaX, event.deltaY);
+ }, {passive:true}));
  [...buttons, sidePrev, sideNext].forEach(button => {
   button.addEventListener('click', () => {
    button.classList.remove('is-pressed');
